@@ -16,8 +16,9 @@ export class AppComponent implements OnInit {
   constructor(private store: Store<fromStore.State>) {}
 
   ngOnInit(){
-      this.store.dispatch(new fromStore.CreateTodo({id: 1, done: false, value: "Commit a suicide"}))
-      this.store.dispatch(new fromStore.CreateTodo({id: 2, done: false, value: "Go to heaven"}))
 
+  }
+  addTodo(todo){
+    this.store.dispatch(new fromStore.CreateTodo({id: todo, done: false, value: todo}))
   }
 }

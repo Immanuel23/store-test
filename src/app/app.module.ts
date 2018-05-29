@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 
 import { StoreModule } from '@ngrx/store';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
+import { FormsModule }   from '@angular/forms';
 
 import { reducers } from '../app/store'
 
@@ -18,7 +19,8 @@ import { AppComponent } from './app.component';
     StoreModule.forRoot(reducers),
     StoreDevtoolsModule.instrument({
       maxAge: 10
-    })
+    }),
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
